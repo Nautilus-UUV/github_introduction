@@ -78,7 +78,7 @@ You can of course create a separate SSH Key for Github, but it is not necessary.
 
 ### Step 2: Create a new SSH Key
 ```bash
-ssh-keygen -t ed25519 -C "~/.ssh/Github"
+ssh-keygen -t ed25519 -f "~/.ssh/Github"
 ```
 Enter a passphrase when prompted. (You can leave it blank if you want.)
 
@@ -118,6 +118,28 @@ If you get a message saying "Hi <username>!
 You've successfully authenticated, but GitHub does not provide shell access.", you have successfully set up your SSH Key.
 
 ## Cloning a Repository
+Cloning a repository is how we download a repository from Github to our computer.
+This is the first step in working on a project from other people.
+We first need to get the clone link from Github.
+You can find the clone link by clicking on the green "Code" button on the repository page.
+Select the SSH option and copy the link.
+
+Now we can clone the repository.
+```bash
+git clone <link>
+```
+For the exercise we will clone this repository.
+```bash
+git clone git@github.com:Nautilus-UUV/github_introduction.git
+```
+If you typed a passphrase when creating your SSH Key, you will be prompted to enter it.
+
+You will now have a folder called `github_introduction` in your current directory.
+
+## Opening the Repository
+You can open the repository in your favourite IDE.
+I will be using Jetbrains Pycharm, so Pictures will be from Pycharm.
+Jetbrains IDEs can be downloaded for free with a student email [here](https://www.jetbrains.com/community/education/#students).
 
 
 
