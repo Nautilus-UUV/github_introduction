@@ -141,5 +141,118 @@ You can open the repository in your favourite IDE.
 I will be using Jetbrains Pycharm, so Pictures will be from Pycharm.
 Jetbrains IDEs can be downloaded for free with a student email [here](https://www.jetbrains.com/community/education/#students).
 
+We can now use our first git command.
+```bash
+git log
+```
+This will show us the timeline of the repository.
+You can use the arrow keys to scroll up and down, and press `q` to exit.
+
+With Jetbrains IDEs you can also see the timeline in the bottom left corner under the `git`tab.
+![Log](imgs/git_log.png)
+
+Each point in this timline is called a commit.
+A commit is a point in the timeline where we have made a change to the repository.
+
+## Creating a branch
+We can now create a branch.
+```bash
+git branch <branch_name>
+```
+We can now switch to the branch.
+```bash
+git checkout <branch_name>
+```
+
+For this exercise create a branch with your name.
+
+In Jetbrains IDEs you can create a branch by clicking on the `git` tab in the bottom left corner.
+You click the commit you want to branch from and click `New Branch`.
+In Jetbrains the new branch will automatically be checked out (you can se the checked out branch with the price tag icon).
+You can checkout a branch by clicking on the branch name and selecting the branch you want to check out.
+
+You can now see the branch in the bottom left corner.
+![Branch](imgs/git_branch.png)
+
+## Making a change to the repository
+To any of the branches we can make changes.
+It is important to note often you will have something called "main" or "master" protection.
+This means you can not make changes to the main branch.
+You will need to create a branch and make changes to that branch.
+This is to prevent people from making changes to the main branch without review,
+as the main branch is often the branch that is deployed / used.
+
+For the exercise we will be making a new file.
+Create a new file called `<your_name>.txt` in the `github_introduction` repository.
+Per default git will not track this file.
+
+We can see this by running the command:
+```bash
+git status
+```
+The file should be in the untracked files section.
+
+To add it to the tracked files we can run the command:
+```bash
+git add <file_name>
+```
+We can now see the file in the staged files section.
+
+On Jetbrains IDEs after creating the file you will get a popup asking if you want to add the file to git.
+Or you can always later right click on the file and select `Git -> Add`.
+
+## Committing the change
+For any major change we made to the repository we want to create a commit.
+This includes stuff like:
+- Adding a new file
+- Deleting a file
+- Changing a file
+- Fixing a bug
+- Adding a feature
+- etc.
+You should always create a commit for each of these changes alone. 
+Do not cluster them together.
+This makes it easier to find the commit that introduced a bug.
+
+To commit the change we can run the command:
+```bash
+git commit -m "<commit_message>"
+```
+The commit message should be a short description of what the commit does.
+For example:
+- "Added <file_name>"
+- "Fixed bug in <file_name>"
+- "Fixed problem <issue_id> in <file_name>"
+- "Added feature <feature_name>"
+- etc.
+
+On Jetbrains IDEs you can commit by clicking on the `commit` tab in the left side bar.
+Here you can see the files that have been changed.
+You can select the files you want to commit.
+
+![Commit](imgs/git_commit.png)
+
+Once you have commited you can check the `git log` and you should be able to see your commit.
+
+![Log](imgs/git_log_after_commit.png)
+
+## Reversing a commit (Reverting)
+Sometimes we make a mistake and want to undo a commit.
+We can either revert the commit or create a new branch before the point were we made the mistake.
+
+As you already know how to create a branch, we will go over how to revert a commit.
+
+To revert a commit we first need to find the commit we want to revert.
+We can look at the log and find the commit we want to revert.
+We can then copy the commit hash. This is the 8 character long string in the commit message.
+
+We can now revert the commit.
+```bash
+git revert <commit_hash>
+```
+This will create a new commit that reverts the changes made in the commit we specified.
+In Jetbrains IDEs you can revert a commit by right clicking on the commit and selecting `Revert Commit`.
+
+For the exercise revert the commit you just made.
 
 
