@@ -358,6 +358,13 @@ For the exercise delete your branch.
 git branch -d <branch_name>
 ```
 
+### Rebasing
+Rebasing is a tool to change the history of a given branch.
+As an example: If you work for a longer time in a seperate branch, there is the possibility that the master/main branch get updated in the mean time. To keep the branch updated one can use `git rebase <branch_name>` to update the commits of the current branch with the commits made on another branch (use `git rebase origin/<branch_name>` to update your branch with respect to the remote branch.
+
+#### ATTENTION:
+As changing the history of a branch somewhat conflicts with the general idea of git versioning. Differing remote and local branches can require `git push --force` in order to push the new history to the remote repo. Only force push if you are completly sure about your changes!
+
 ## Pushing / Pulling Changes
 We are now done with the changes we made to the repository.
 We want to upload the changes to Github so that other people can see them.
