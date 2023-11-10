@@ -284,4 +284,57 @@ This will merge the branch into the branch we are currently on.
 For the exercise merge your branch into the main branch.
 So checkout the main branch and merge your branch into the main branch.
 
+Once we have merged the branch we can delete the branch (if we don't need it anymore).
+For the exercise delete your branch.
+```bash
+git branch -d <branch_name>
+```
+
+## Pushing / Pulling Changes
+We are now done with the changes we made to the repository.
+We want to upload the changes to Github so that other people can see them.
+This is done by pushing the changes to Github.
+We can push the changes by running the command:
+```bash
+git push
+```
+This will push the changes to the branch we are currently on.
+This will make the branch on Github the same as the branch on our computer.
+
+If we want to get changes our colleagues have made we can pull the changes.
+This is done by running the command:
+```bash
+git pull
+```
+
+On Jetbrains IDEs you can push and pull by clicking the Arrows in the top right corner.
+
+## Conflicts
+Sometimes when we pull, push or merge we get a conflict.
+This is no reason to panic. 
+This is a normal part of working with git.
+A conflict happens when git can not automatically merge the changes.
+For example when two people have changed the same function in a file.
+
+This means we have to manually select which changes we want to keep.
+We can do this by opening the file in our favourite text editor.
+We will see something like this:
+```
+<<<<<<< HEAD
+This is the change I made
+=======
+This is the change my colleague made
+>>>>>>> <branch_name>
+```
+We can now select which change we want to keep.
+Once we are happy with the changes we can save the file.
+We can then add the file again to git with `git add` and commit the changes.
+
+Jetbrains IDEs have a built in tool to help with conflicts.
+
+If you want to see a conflict, create a two new branches.
+In both branches create a new file called `conflict.txt` with different content.
+Merge one branch into the other branch.
+You should now have a conflict.
+
 
