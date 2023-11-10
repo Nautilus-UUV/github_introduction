@@ -26,6 +26,8 @@
 - [Pushing / Pulling Changes](#pushing--pulling-changes)
 - [Conflicts](#conflicts)
 - [Gitignore](#gitignore)
+- [Practicing](#practicing)
+- [Resources](#resources)
 
 ## What is Version Control?
 Version Control is something we use on a regular basis. 
@@ -399,3 +401,14 @@ For example:
 
 We can tell git to ignore these files by creating a `.gitignore` file.
 The exact syntax of this file can be found [here](https://git-scm.com/docs/gitignore).
+
+## Practicing
+If you want to practice even more there are some resources I can recommend:
+- [Git Branching](https://learngitbranching.js.org/)
+- [Oh My Git](https://blinry.itch.io/oh-my-git)
+- [Git Exercises](https://gitexercises.fracz.com/)
+
+## Resources
+- [Git Documentation](https://git-scm.com/doc)
+- [Github Documentation](https://docs.github.com/en)
+- [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
