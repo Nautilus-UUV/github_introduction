@@ -13,6 +13,7 @@
   - [Step 3: Add SSH Config](#step-3-add-ssh-config)
   - [Step 4: Add SSH Key to Github](#step-4-add-ssh-key-to-github)
   - [Step 5: Test SSH Connection](#step-5-test-ssh-connection)
+- [Git Help](#git-help)
 - [Cloning a Repository](#cloning-a-repository)
 - [Creating a new Repository](#creating-a-new-repository)
 - [Opening the Repository](#opening-the-repository)
@@ -144,6 +145,17 @@ If you get a warning about the authenticity of the host, type `yes` to continue.
 If you get a message saying "Hi <username>! 
 You've successfully authenticated, but GitHub does not provide shell access.", you have successfully set up your SSH Key.
 
+## Git Help
+You can learn more about the git commands by running the command:
+```bash
+git -h
+```
+
+You can also learn more about a specific command by running the command:
+```bash
+git <command> -h
+```
+
 ## Cloning a Repository
 Cloning a repository is how we download a repository from Github to our computer.
 This is the first step in working on a project from other people.
@@ -210,6 +222,11 @@ We can now switch to the branch.
 git checkout <branch_name>
 ```
 
+Alternatively we can create and checkout a branch with one command.
+```bash
+git checkout -b <branch_name>
+```
+
 For this exercise create a branch with your name.
 
 In Jetbrains IDEs you can create a branch by clicking on the `git` tab in the bottom left corner.
@@ -243,6 +260,11 @@ To add it to the tracked files we can run the command:
 git add <file_name>
 ```
 We can now see the file in the staged files section.
+
+You can also stage all untracked files with the command:
+```bash
+git add .
+```
 
 On Jetbrains IDEs after creating the file you will get a popup asking if you want to add the file to git.
 Or you can always later right click on the file and select `Git -> Add`.
