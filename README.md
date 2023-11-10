@@ -251,8 +251,37 @@ We can now revert the commit.
 git revert <commit_hash>
 ```
 This will create a new commit that reverts the changes made in the commit we specified.
-In Jetbrains IDEs you can revert a commit by right clicking on the commit and selecting `Revert Commit`.
+In Jetbrains IDEs you can revert a commit by right-clicking on the commit and selecting `Revert Commit`.
 
 For the exercise revert the commit you just made.
+
+## Merging a branch
+### Pull Requests
+Once we are done with the changes we made in a branch we want to merge it back into the main branch.
+This is done by creating a pull request.
+A pull request is a request to merge a branch into another branch.
+This is done so that someone else can review the changes before they are merged.
+
+A pull request is created on Github.
+You can go to the `Pull requests` tab on the repository page and click `New pull request`.
+You can then select the branch you want to merge into the main branch.
+You can then add a title and description to the pull request.
+You can also add reviewers to the pull request.
+Once you are done you can click `Create pull request`.
+
+### Merging
+Sometimes we want to merge a branch without a pull request.
+This is often the case when we are merging a branch into our own branch.
+For example when we are merging the new bug fix on the main branch into our feature branch.
+
+To merge a branch we first need to checkout the branch we want to merge into.
+Then we can run the command:
+```bash
+git merge <branch_name>
+```
+This will merge the branch into the branch we are currently on.
+
+For the exercise merge your branch into the main branch.
+So checkout the main branch and merge your branch into the main branch.
 
 
