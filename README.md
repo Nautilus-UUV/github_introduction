@@ -1,4 +1,31 @@
 # Github Introduction
+## Table of Contents
+- [What is Version Control?](#what-is-version-control)
+  - [1-Dimensional Version Control](#1-dimensional-version-control)
+  - [2-Dimensional Version Control](#2-dimensional-version-control)
+- [What is Git?](#what-is-git)
+- [What is Github?](#what-is-github)
+- [What is a Repository?](#what-is-a-repository)
+- [Installing Git on your Computer](#installing-git-on-your-computer)
+- [Creating SSH Keys](#creating-ssh-keys)
+  - [Step 1: Check for existing SSH Keys](#step-1-check-for-existing-ssh-keys)
+  - [Step 2: Create a new SSH Key](#step-2-create-a-new-ssh-key)
+  - [Step 3: Add SSH Config](#step-3-add-ssh-config)
+  - [Step 4: Add SSH Key to Github](#step-4-add-ssh-key-to-github)
+  - [Step 5: Test SSH Connection](#step-5-test-ssh-connection)
+- [Cloning a Repository](#cloning-a-repository)
+- [Creating a new Repository](#creating-a-new-repository)
+- [Opening the Repository](#opening-the-repository)
+- [Creating a branch](#creating-a-branch)
+- [Making a change to the repository](#making-a-change-to-the-repository)
+- [Committing the change](#committing-the-change)
+- [Reversing a commit (Reverting)](#reversing-a-commit-reverting)
+- [Merging a branch](#merging-a-branch)
+  - [Pull Requests](#pull-requests)
+  - [Merging](#merging)
+- [Pushing / Pulling Changes](#pushing--pulling-changes)
+- [Conflicts](#conflicts)
+- [Gitignore](#gitignore)
 
 ## What is Version Control?
 Version Control is something we use on a regular basis. 
@@ -135,6 +162,25 @@ git clone git@github.com:Nautilus-UUV/github_introduction.git
 If you typed a passphrase when creating your SSH Key, you will be prompted to enter it.
 
 You will now have a folder called `github_introduction` in your current directory.
+
+## Creating a new Repository
+Sometimes you don't want to clone a repository.
+You want to create a new repository.
+On Github click on the `New` button on the repositories page.
+You can then give the repository a name and select if you want it to be public or private.
+Most of our repositories will be private as they contain code we don't want to share with the world.
+You can also add a description to the repository.
+
+You can also create a folder on your computer and run the command:
+```bash
+git init
+```
+This will start tracking the folder with git.
+You can then add the remote (server) repository with the command:
+```bash
+git remote add origin <link>
+```
+For pushing / pulling changes you can look at [this section](#pushing--pulling-changes)
 
 ## Opening the Repository
 You can open the repository in your favourite IDE.
@@ -337,4 +383,19 @@ In both branches create a new file called `conflict.txt` with different content.
 Merge one branch into the other branch.
 You should now have a conflict.
 
+Once you have resolved the conflict, push the changes to Github.
+The timeline should now look something like this:
+![Conflict](imgs/git_conflict.png)
 
+If you want to see some conflicts while pushing. Have a colleague push some changes to the same file you are pushing to.
+
+## Gitignore
+Sometimes we have files we don't want to track with git.
+For example:
+- Files that are created when we run our code (Like log files).
+- Files that contain sensitive information.
+- Files that are created by our IDE.
+- etc.
+
+We can tell git to ignore these files by creating a `.gitignore` file.
+The exact syntax of this file can be found [here](https://git-scm.com/docs/gitignore).
