@@ -52,11 +52,9 @@ Once you edit a previous point in the timeline, the following points are erased.
 This is the problem that 2-Dimensional Version Control solves.
 A simple solution most people do is create a copy of the file.
 This is a simple solution, but it is not a good solution.
-You end up with folders full of files that are all similar, but slightly different and all named:
-- Assignment1
-- Assignment1-1
-- Assignment1-FinalVersion
-- Assignment1-TrueFinalVersion
+You end up with folders full of files that are all similar, but slightly different and all named.
+
+![Simple Solution](imgs/simple_version_control.png)
 
 What instead of making copies we instead create a branch in the timeline.
 This allows us to go back to the previous point in the timeline, while also being able to go back to the current point in the timeline.
