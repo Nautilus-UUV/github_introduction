@@ -57,13 +57,13 @@ You end up with folders full of files that are all similar, but slightly differe
 
 ![Simple Solution](imgs/simple_version_control.png)
 
-What instead of making copies we instead create a branch in the timeline.
+What if instead of making copies we instead create a branch in the timeline.
 This allows us to go back to the previous point in the timeline, while also being able to go back to the current point in the timeline.
 With the added benefit of being able to merge the two timelines together at a later point.
 
 ## What is Git?
 Git is a version control system.
-It does pretty much the exact thing we just talked about.
+It does pretty much the exact same thing we just talked about.
 - We have a timeline of our project.
 - We can create branches in the timeline.
 - We can merge branches together.
@@ -167,7 +167,7 @@ Now we can clone the repository.
 ```bash
 git clone <link>
 ```
-For the exercise we will clone this repository.
+As an exercise we will clone this repository.
 ```bash
 git clone git@github.com:Nautilus-UUV/github_introduction.git
 ```
@@ -233,19 +233,20 @@ In Jetbrains IDEs you can create a branch by clicking on the `git` tab in the bo
 You click the commit you want to branch from and click `New Branch`.
 In Jetbrains the new branch will automatically be checked out (you can se the checked out branch with the price tag icon).
 You can checkout a branch by clicking on the branch name and selecting the branch you want to check out.
-
-You can now see the branch in the bottom left corner.
 ![Branch](imgs/git_branch.png)
 
+You can now see the branch in the bottom left corner.
+
+
 ## Making a change to the repository
-To any of the branches we can make changes.
+We can make changes to any of the branches.
 It is important to note often you will have something called "main" or "master" protection.
 This means you can not make changes to the main branch.
 You will need to create a branch and make changes to that branch.
 This is to prevent people from making changes to the main branch without review,
 as the main branch is often the branch that is deployed / used.
 
-For the exercise we will be making a new file.
+As an exercise we will be making a new file.
 Create a new file called `<your_name>.txt` in the `github_introduction` repository.
 Per default git will not track this file.
 
@@ -306,7 +307,7 @@ Once you have commited you can check the `git log` and you should be able to see
 
 ## Reversing a commit (Reverting)
 Sometimes we make a mistake and want to undo a commit.
-We can either revert the commit or create a new branch before the point were we made the mistake.
+We can either: revert the commit, or, create a new branch starting from a point before the mistake was made.
 
 As you already know how to create a branch, we will go over how to revert a commit.
 
@@ -321,11 +322,11 @@ git revert <commit_hash>
 This will create a new commit that reverts the changes made in the commit we specified.
 In Jetbrains IDEs you can revert a commit by right-clicking on the commit and selecting `Revert Commit`.
 
-For the exercise revert the commit you just made.
+As an exercise, revert the commit you just made.
 
 ## Merging a branch
 ### Pull Requests
-Once we are done with the changes we made in a branch we want to merge it back into the main branch.
+Once we are done with the changes we made in a branch, we want to merge it back into the main branch.
 This is done by creating a pull request.
 A pull request is a request to merge a branch into another branch.
 This is done so that someone else can review the changes before they are merged.
@@ -349,11 +350,11 @@ git merge <branch_name>
 ```
 This will merge the branch into the branch we are currently on.
 
-For the exercise merge your branch into the main branch.
+As an exercise merge your branch into the main branch.
 So checkout the main branch and merge your branch into the main branch.
 
 Once we have merged the branch we can delete the branch (if we don't need it anymore).
-For the exercise delete your branch.
+As an exercise delete your branch.
 ```bash
 git branch -d <branch_name>
 ```
