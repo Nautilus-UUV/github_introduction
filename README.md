@@ -207,6 +207,7 @@ This will show us the timeline of the repository.
 You can use the arrow keys to scroll up and down, and press `q` to exit.
 
 With Jetbrains IDEs you can also see the timeline in the bottom left corner under the `git`tab.
+
 ![Log](imgs/git_log.png)
 
 Each point in this timline is called a commit.
@@ -233,6 +234,7 @@ In Jetbrains IDEs you can create a branch by clicking on the `git` tab in the bo
 You click the commit you want to branch from and click `New Branch`.
 In Jetbrains the new branch will automatically be checked out (you can se the checked out branch with the price tag icon).
 You can checkout a branch by clicking on the branch name and selecting the branch you want to check out.
+
 ![Branch](imgs/git_branch.png)
 
 You can now see the branch in the bottom left corner.
